@@ -13,11 +13,33 @@ class App extends Component {
     properties: [
 
       {name :"Midhayy" ,age :20},
-      {name :"Maryam"},
+      {name :"Maryam" ,age:17},
       {name : "Wareesha"}
 
     ]
   }
+
+
+//Event Listener for button 
+//SwitchButton is a function
+SwitchButtonHandler =(takeName) =>{
+
+    //console.log("Yeah it worked")
+    //NOT WORK    this.state.properties[0].name = "Midha Tahir";
+
+//set state method is used to update state    
+    this.setState({
+      properties: [
+
+        {name :takeName,age :20},
+        {name :"Maryam" ,age:21},
+  
+      ]
+    })
+
+}
+
+
 
   render() {
     return (
@@ -27,15 +49,28 @@ class App extends Component {
  {/* name and age are attributes which is called in practice.js
        file as props */}        
        
-        <Practice name="Fareena" age="19"/>
+      <Practice name="Fareena" age="19"/>
 
 {/* we can also call the components as opening and closing tags */}       
 
-        <Practice name="Mahrukh" age="20">Pratice Children props</Practice>
+      <Practice name="Mahrukh" age="20">Pratice Children props</Practice>
 
-        <Practice name="Maira" age="16"/>
+      <Practice name="Maira" age="16"/>
 
-       <Practice name={this.state.properties[0].name} age={this.state.properties[0].age}/>
+<br/>
+<h2>WORK ON STATES:</h2>
+       <button onClick={this.SwitchButtonHandler.bind(this , "Fareena")}>Switch Name</button>
+
+{/* we can also pass function as a property in component   */}
+
+       <Practice name={this.state.properties[0].name}
+        age={this.state.properties[0].age}
+        click={() => this.SwitchButtonHandler("Fareena Ehtesham")}/>
+
+
+       <Practice name={this.state.properties[1].name} 
+        age={this.state.properties[1].age}
+        click={this.SwitchButtonHandler.bind(this,"wareesha")}/>
       </div>
 
 
