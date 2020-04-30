@@ -61,15 +61,17 @@ SwitchButtonHandler =(takeName) =>{
 <h2>WORK ON STATES:</h2>
        <button onClick={this.SwitchButtonHandler.bind(this , "Fareena")}>Switch Name</button>
 
-{/* we can also pass function as a property in component   */}
+{/* pass function as a property in component so (practice.js) access by using props */}
 
        <Practice name={this.state.properties[0].name}
         age={this.state.properties[0].age}
+{/* Another Approach to handle argument in function */}
         click={() => this.SwitchButtonHandler("Fareena Ehtesham")}/>
 
 
        <Practice name={this.state.properties[1].name} 
         age={this.state.properties[1].age}
+{/* Use bind because our function take argument */}
         click={this.SwitchButtonHandler.bind(this,"wareesha")}/>
       </div>
 
@@ -80,42 +82,3 @@ SwitchButtonHandler =(takeName) =>{
 
 export default App;
 
-/*the code inside in return (which is JSX) the html code is not actually HTML it is JavaScript
-b/c the code behind react.CreateElement( you can pass several arguments of html here) which is 
-ofcourse not a good choice so thatswhy we use html syntax code inside return*/
-
-
-/* 
-
-Another noticeable thing is that all the code written under return statement can be wrapped by 
-single root div like:
-
-return(
-  <div>
-  <h1>Hello WOrld</h1>
-  </div>
-
-)
-
-the code will not be run just like that:
-
-return(
-
-  <div>
-  <h1>Hello WOrld</h1>
-  </div>
-
-  <h1>Dont WOrk OUT OF DIV </h1>
-)
-
-*/
-
-
-/*
-Component make the code more reusable b/c if you want to call code multiple times in different
-pages you just call the self closing tag not write code again anad again
-
-</Menu>
-</Menu>
- 
-*/
