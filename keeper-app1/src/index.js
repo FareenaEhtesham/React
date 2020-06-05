@@ -10,8 +10,8 @@ ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
 
-    {/* <Emoji /> */}
-    <Login />
+    <Emoji />
+    {/* <Login /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
