@@ -1,8 +1,9 @@
 import React from 'react'
-
+import Form from './component/form'
+import Input from './component/input'
 import Register from './component/register'
 
-var userIsRegistered = false
+var userIsRegistered = true
 
 // let islogin =true
 
