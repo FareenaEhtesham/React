@@ -1,6 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 
-function Register(props) {
+
+ const Register=(props) =>{
+
+    
+
+    const [mouseOver , setmouseOver]=useState(false)
+
+    const hovering =() =>{
+
+    setmouseOver(true)
+
+    }
+    const hoveringOut =() =>{
+      setmouseOver(false)
+    }
+
+    // var styling ={
+    //   backgroundColor : "green"
+    // }
+    // const hoveringOut =() =>{
+    //   styling.backgroundColor = "green"
+    // }
+
+    // const hovering =() =>{
+    //   styling.backgroundColor = "black"
+    // }
+
   return (
     <div>
         <h1>
@@ -16,7 +42,13 @@ function Register(props) {
         }
       
 
-          <button type="submit">{props.isRegistered ? "Login" : "Register"}</button>
+          <button onMouseOver={hovering} onMouseOut={hoveringOut} 
+          
+          style={mouseOver ? {backgroundColor : "black"} : {backgroundColor : "green"}}
+          type="submit">
+         
+            {props.isRegistered ? "Login" : "Register"}
+            </button>
         </form>
     </div>
   );
