@@ -7,6 +7,7 @@ import Login from './LogIn/login'
 import Decl_Imp from './Decl_Imp'
 import Time from './Time'
 import Main from './Hooks/main'
+import React_Form from './Form_Component/React_Form'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
@@ -14,7 +15,8 @@ ReactDOM.render(
     {/* <App /> */}
 
     {/* <Emoji /> */}
-    <Login />
+    {/* <Login /> */}
+	<React_Form />
     {/* <Decl_Imp /> */}
     {/* <Main/> */}
 	{/* <Time /> */}
